@@ -15,9 +15,9 @@ while line = gets
       print " 2"
     else
       print 2
+      print_space = true
     end
     n = n / 2
-    print_space = true
   end
 
   (3 .. Math.sqrt(n).to_i).step(2) do |i|
@@ -26,9 +26,9 @@ while line = gets
         print " #{i}"
       else
         print i
+        print_space = true
       end
       n = n / i
-      print_space = true
     end
   end
 
