@@ -3,11 +3,11 @@
 
 void print_with_space(int n, int *print_space) {
   if (*print_space) {
-    printf(" ");
+    printf(" %d", n);
   } else {
+    printf("%d", n);
     *print_space = 1;
   }
-  printf("%d", n);
 }
 
 int main(int argc, char *argv[]){
