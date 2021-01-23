@@ -17,12 +17,13 @@ fn main() {
             print_with_space(&2, &mut print_space);
         }
 
-        let sqrt: i32 = (n as f64).sqrt() as i32;
-        for i in (3..=sqrt).step_by(2) {
+        let mut i = 3;
+        while i * i <= n {
             while n % i == 0 {
                 n = n / i;
                 print_with_space(&i, &mut print_space);
             }
+            i += 2;
         }
 
         if n > 1 {

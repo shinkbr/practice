@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 
 void print_with_space(int n, int *print_space) {
   if (*print_space) {
@@ -27,7 +26,7 @@ int main(int argc, char *argv[]){
       n = n / 2;
     }
 
-    for (int i = 3; i <= sqrt(n); i += 2) {
+    for (int i = 3; i * i <= n; i += 2) {
       while (n % i == 0) {
         print_with_space(i, &print_space);
         n = n / i;

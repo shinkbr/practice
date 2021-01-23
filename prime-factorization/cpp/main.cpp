@@ -27,7 +27,7 @@ int main(int argc, char *argv[]){
       print_with_space(2, &print_space);
     }
 
-    for (int i = 3; i <= sqrt(n); i += 2) {
+    for (int i = 3; i * i <= n; i += 2) {
       while (n % i == 0) {
         n = n / i;
         print_with_space(i, &print_space);

@@ -20,7 +20,8 @@ while line = gets
     n = n / 2
   end
 
-  (3 .. Math.sqrt(n).to_i).step(2) do |i|
+  i = 3
+  while i * i <= n do
     while n % i == 0
       if print_space
         print " #{i}"
@@ -30,6 +31,8 @@ while line = gets
       end
       n = n / i
     end
+
+    i += 2
   end
 
   unless n == 1
