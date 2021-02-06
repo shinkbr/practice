@@ -1,0 +1,21 @@
+name: test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  prime-factorization:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: apt install
+        run: sudo apt install ocaml-nox
+      - name: make test
+        run: |
+          cd ${GITHUB_WORKSPACE}/prime-factorization
+          for i in */; do
+            make -C "${i}" && make test -C "${i}" || exit 1
+          done
