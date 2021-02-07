@@ -8,7 +8,7 @@ test:
 	diff output.txt ../output.txt || exit 1
 
 benchmark:
-	time seq -f %1.0f 1000000 | ./main > /dev/null
+	time seq -f %1.0f 10000000 | ./main > /dev/null
 
 clean:
 	rm -f main main.cmi main.cmo *.txt

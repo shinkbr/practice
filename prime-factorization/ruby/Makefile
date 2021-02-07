@@ -5,7 +5,7 @@ test:
 	diff output.txt ../output.txt || exit 1
 
 benchmark:
-	time seq -f %1.0f 1000000 | ./main.rb > /dev/null
+	time seq -f %1.0f 10000000 | ./main.rb > /dev/null
 
 clean:
 	rm -f *.txt
